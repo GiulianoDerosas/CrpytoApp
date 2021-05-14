@@ -3,9 +3,16 @@ import CryptoItem from "./CryptoItem";
 
 const CryptoList = ({coins}) => {
 
-    const allCoins = coins.map((coin, index) => {
-        return <CryptoItem coin={coin} key={index}/>
-    })
+    const getData = (object) => {
+      for (const property in object) {
+        // console.log(`${property}: ${object[property]}`)
+        return <CryptoItem coin={property} values={coins[property]} />;
+      }
+    };
+
+    const allCoins = getData(coins) 
+
+    // getData(coins)
 
     return (
         <>

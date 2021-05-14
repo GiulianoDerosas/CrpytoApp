@@ -4,7 +4,7 @@ import CryptoContainer from "./containers/CryptoContainer"
 function App() {
   return (
     <div className="App">
-    <h1>Giuliano's Crypto App</h1>
+    <h1>CryptoTracker</h1>
     <CryptoContainer/>
     </div>
   );
