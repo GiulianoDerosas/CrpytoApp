@@ -1,9 +1,11 @@
 import './App.css';
+import CryptoContainer from "./containers/CryptoContainer"
 
 function App() {
   return (
     <div className="App">
-    <h1>Hello World</h1>
+    <h1>Giuliano's Crypto App</h1>
+    <CryptoContainer/>
     </div>
   );
 }
