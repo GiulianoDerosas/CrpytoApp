@@ -3,10 +3,12 @@ import CryptoContainer from "./containers/CryptoContainer"
 
 function App() {
   return (
-    <div className="App">
+    <>
     <h1>CryptoTracker</h1>
+    <br></br>
+    <br></br>
     <CryptoContainer/>
-    </div>
+    </>
   );
 }
 

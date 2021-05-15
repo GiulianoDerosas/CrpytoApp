@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
-import CryptoList from "../components/CryptoList";
+import CryptoItem from "../components/CryptoList";
+import Search from "../components/Search";
 
 const CryptoContainer = () => {
     const [coins, setCoins] = useState([])
@@ -9,15 +10,16 @@ const CryptoContainer = () => {
     }, [])
 
     const getCryptoData = () => {
-        fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Clitecoin&vs_currencies=usd&include_market_cap=true&include_24hr_change=true")
+        fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false")
         .then(response => response.json())
         .then(coins => setCoins(coins))
     }
-    console.log(coins);
 
     return (
         <>
-            <CryptoList coins = {coins}/>
+        <CryptoItem coins = {coins}/>
+        <br></br>
+        <Search coins = {coins}/>
         </>
     )
 }
