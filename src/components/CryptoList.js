@@ -1,7 +1,6 @@
 import React from "react";
-import CryptoItem from "./CryptoItem";
 
-const CryptoList = ({coins}) => {
+const CryptoList = () => {
 
     const allCoins = () => {}
 
